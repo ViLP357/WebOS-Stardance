@@ -1,19 +1,51 @@
 <!DOCTYPE html>
 <html>
 
-  <body style="background-color: #c8f7f4; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+  <body style="background-image: url(./images/capybara-wallpaper.jpg); background-size: cover; height: 100vh; background-color:#c8f7f4; 
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;margin: 0;">
+    <script>
+      
+      function updateTime() {
+        const d = new Date()
+        document.querySelector('#dateText').innerHTML = d.toLocaleDateString()
+
+        let minutes = d.getMinutes();
+        let hours = d.getHours();
+        let seconds = d.getSeconds();
+        document.querySelector('#dateText').innerHTML += " " + hours + ":"+ minutes + ":" +seconds
+
+      }
+      setInterval(updateTime, 1000)
+    </script>
+
+  <div
+    style="position: absolute; width: 99%; display: flex; backdrop-filter: blur(10px); background-color: rgba(20, 0, 0, 0.25); 
+    color: #fff; justify-content: space-evenly; border-radius: 0px 0px 40px 40px; height: 45px;left: 50%; transform: translate(-50%);
+    border: 1px solid #cacaca; border-top: transparent;">
+    <p style="margin-left: 16px;">
+      CapyOs
+    </p>
+    <p id="dateText" style="size: fit-content; margin-right: 16px; background-color: rgba(256, 256, 256, 0.125); 
+      padding: 10px 10px; border-radius: 16px; margin: 5px;;">
+      00:00:00
+    </p>
+  </div>
+    
+  <div style="border: solid; width: fit-content; padding: 50px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color:#c8f7f4; "> 
     <h1 style="color: #5a1c94; margin:20px">Hello World!</h1>
+
+      <img style="border-radius: 20px;"  src="./images/profile-pic.png" />
+      <p style=" font-family: 'Courier New', Courier, monospace;">Check out my Github profile and other projects I've made. For example</p>
+      
+      <ul style=" font-family: 'Courier New', Courier, monospace;">
+        <li>speedMath Trainer</li>
+        <li>A car game made with Unity</li>
+        <li>A leaderboard for the car game mentioned above</li>
+      </ul>
+  
+
+      <a style="font-size: 20px;"href = "https://github.com/ViLP357">my github</a>
+      <marquee><address>heehheee!</address></marquee>
+    </div>
   </body>
-  <img style="border-radius: 20px;"  src="./images/profile-pic.png" />
-  <p style=" font-family: 'Courier New', Courier, monospace;">Check out my Github profile and other projects I've made. For example</p>
-  <ul style=" font-family: 'Courier New', Courier, monospace;">
-    <li>speedMath Trainer</li>
-    <li>A car game made with Unity</li>
-    <li>A leaderboard for the car game mentioned above</li>
-  </ul>
-  
-  
- 
-  <a style="font-size: 20px;"href = "https://github.com/ViLP357">my github</a>
-   <marquee><address>heehheee!</address></marquee>
 </html>
