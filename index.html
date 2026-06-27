@@ -3,20 +3,6 @@
 
   <body style="background-image: url(./images/capybara-wallpaper.jpg); background-size: cover; height: 100vh; background-color:#c8f7f4; 
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;margin: 0;">
-    <script>
-      
-      function updateTime() {
-        const d = new Date()
-        document.querySelector('#dateText').innerHTML = d.toLocaleDateString()
-
-        let minutes = d.getMinutes();
-        let hours = d.getHours();
-        let seconds = d.getSeconds();
-        document.querySelector('#dateText').innerHTML += " " + hours + ":"+ minutes + ":" +seconds
-
-      }
-      setInterval(updateTime, 1000)
-    </script>
 
   <div
     style="position: absolute; width: 99%; display: flex; backdrop-filter: blur(10px); background-color: rgba(20, 0, 0, 0.25); 
@@ -31,9 +17,14 @@
     </p>
   </div>
     
-  <div style="border: solid; width: fit-content; padding: 50px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color:#c8f7f4; "> 
-    <h1 style="color: #5a1c94; margin:20px">Hello World!</h1>
+  <div id = "welcome" style="border: solid; width: fit-content; padding: 50px; position: absolute; background-color:#c8f7f4; "> 
+   <!-- top: 50%; left: 50%; transform: translate(-50%, -50%); -->
+    <div id="welcomeheader"
+      style="width: 100%; display: flex;cursor: move; margin-top: 8px;">
+      <p style="margin: 0px; color: #4d15cf; font-weight: 500">[ X ]</p>
+    </div>
 
+    <h1 style="color: #5a1c94; margin:20px">Hello World!</h1>
       <img style="border-radius: 20px;"  src="./images/profile-pic.png" />
       <p style=" font-family: 'Courier New', Courier, monospace;">Check out my Github profile and other projects I've made. For example</p>
       
@@ -47,5 +38,9 @@
       <a style="font-size: 20px;"href = "https://github.com/ViLP357">my github</a>
       <marquee><address>heehheee!</address></marquee>
     </div>
+
+    <script src="script.js"></script>
+
   </body>
 </html>
+
