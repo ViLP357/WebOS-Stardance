@@ -1,0 +1,54 @@
+.window {
+    border: solid; 
+    width: fit-content; 
+    padding: 30px; 
+    position: absolute; 
+    background-color:#c8f7f4;  
+    top: calc(50% - 250px); 
+    left: calc(50% - 300px); 
+    display: flex;
+    flex-direction: column; 
+    padding-top: 0px;
+    border-radius: 6px;
+    border-color: rgb(105, 205, 171);
+}
+.windowHeader {
+    width: 100%; 
+    display: flex;
+    cursor: move; 
+    background-color: rgba(107, 255, 201, 0.4);
+    border-radius: 0px 0px 30px 30px;
+    border: 2px solid #cacaca; 
+    border-top: transparent;
+    backdrop-filter: blur(10px); 
+    height: 30px;
+}
+.topbar {
+    position: absolute; 
+    width: 99%; 
+    display: flex; 
+    backdrop-filter: blur(10px); 
+    background-color: rgba(20, 0, 0, 0.25); 
+    color: #fff; 
+    justify-content: space-evenly; 
+    border-radius: 0px 0px 40px 40px; 
+    height: 45px;
+    left: 50%;
+    transform: translate(-50%);
+    border: 2px solid #cacaca; 
+    border-top: transparent;
+}
+.closebutton {
+  width: 10px;
+  height: 8px;
+  cursor: pointer;
+  background-color: #EC6B5E;
+  border-radius: 16px;
+  border: solid 3px rgb(172, 5, 5);
+  padding: 5px;
+  padding-top: 0px;
+  padding-bottom: 10px;
+  margin: 5px;
+  margin-left: 15px;
+  color: white;
+}

@@ -11,7 +11,11 @@ function updateTime() {
 
  // Make the DIV element draggable:
 dragElement(document.getElementById("welcome"));
+var welcomeScreen = document.querySelector("#welcome")
 
+
+var welcomeScreenClose = document.querySelector("#welcomeclose")
+var welcomeScreenOpen = document.querySelector("#welcomeopen")
 // Step 1: Define a function called `dragElement` that makes an HTML element draggable.
 function dragElement(element) {
   // Step 2: Set up variables to keep track of the element's position.
@@ -64,10 +68,20 @@ function dragElement(element) {
   }
 }
 
-if (document.getElementById(elmnt.id + "header")) {
-	// if present, the header is where you move the DIV from:
-	document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
-} else {
-	// otherwise, move the DIV from anywhere inside the DIV:
-	elmnt.onmousedown = dragMouseDown;
+
+//close
+function closeWindow(element) {
+  element.style.display = "none"
 }
+//open
+function openWindow(element) {
+  element.style.display = "flex"
+}
+
+welcomeScreenClose.addEventListener("click", function() {
+  closeWindow(welcomeScreen);
+});
+
+welcomeScreenOpen.addEventListener("click", function() {
+  openWindow(welcomeScreen);
+});
