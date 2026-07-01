@@ -52,3 +52,8 @@
   margin-left: 15px;
   color: white;
 }
+.selected {
+    color: red;
+     filter: drop-shadow(0 0 8px #1371b4);
+     background-color: #EC6B5E;
+}

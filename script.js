@@ -11,11 +11,17 @@ function updateTime() {
 
  // Make the DIV element draggable:
 dragElement(document.getElementById("welcome"));
+dragElement(document.querySelector("#anecdotes"))
+
 var welcomeScreen = document.querySelector("#welcome")
-
-
 var welcomeScreenClose = document.querySelector("#welcomeclose")
 var welcomeScreenOpen = document.querySelector("#welcomeopen")
+
+var anecdotesScreen = document.querySelector("#anecdotes")
+var anecdotesScreenClose = document.querySelector("#anecdotesclose")
+
+
+var selectedIcon = undefined
 // Step 1: Define a function called `dragElement` that makes an HTML element draggable.
 function dragElement(element) {
   // Step 2: Set up variables to keep track of the element's position.
@@ -68,7 +74,6 @@ function dragElement(element) {
   }
 }
 
-
 //close
 function closeWindow(element) {
   element.style.display = "none"
@@ -85,3 +90,23 @@ welcomeScreenClose.addEventListener("click", function() {
 welcomeScreenOpen.addEventListener("click", function() {
   openWindow(welcomeScreen);
 });
+
+anecdotesScreenClose.addEventListener("click", () => closeWindow(anecdotesScreen));
+
+function selectIcon(element) {
+  element.classList.add("selected");
+  selectedIcon = element
+} 
+function deselectIcon(element) {
+  element.classList.remove("selected");
+  selectedIcon = undefined
+} 
+
+function handleIconTap(element) {
+  if (element.classList.contains("selected")) {
+    deselectIcon(element)
+    openWindow(window)
+  } else {
+    selectIcon(element)
+  }
+}
